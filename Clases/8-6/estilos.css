@@ -1,0 +1,19 @@
+body{
+ background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.container{
+    background-color: #fff;
+    width: 400px;
+    margin: 50px auto;
+    border: 1px solid #000;
+    border-radius: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+input,select,button{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
