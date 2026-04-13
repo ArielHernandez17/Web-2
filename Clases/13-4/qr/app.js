@@ -11,7 +11,14 @@ function generateQRCode() {
         return;
     }
 
-    //let url
+    let url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(textoComepleto);
+
+    let qrImg = document.createElement("img");
+    qrImg.src = url;
+    qrImg.alt = "Código QR";
+
+    document.getElementById("qr").appendChild(qrImg);
+    
 
 
 }
