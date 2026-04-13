@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div id="calculadora">
+        <input type="text" id="display" class="calcula">
+        <br>
+        <button onclick="agregarPantalla('1')">1</button>
+        <button onclick="agregarPantalla('2')">2</button>
+        <button onclick="agregarPantalla('3')">3</button>
+        <button onclick="agregarPantalla('+')">+</button>
+        <br>
+        <button onclick="agregarPantalla('4')">4</button>
+        <button onclick="agregarPantalla('5')">5</button>
+        <button onclick="agregarPantalla('6')">6</button>
+        <button onclick="agregarPantalla('-')">-</button>
+        <br>
+        <button onclick="agregarPantalla('7')">7</button>
+        <button onclick="agregarPantalla('8')">8</button>
+        <button onclick="agregarPantalla('9')">9</button>
+        <button onclick="agregarPantalla('*')">*</button>
+        <br>
+        <button onclick="agregarPantalla('0')">0</button>
+        <button onclick="agregarPantalla('.')">.</button>
+        <button onclick="calcularResultado()">=</button>
+        <button onclick="agregarPantalla('/')">/</button>
+        <button onclick="limpiarPantalla()">Limpiar</button>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
