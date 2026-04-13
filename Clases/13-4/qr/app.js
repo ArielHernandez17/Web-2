@@ -1,25 +1,27 @@
-function generateQRCode() {
-    let input1=document.getElementById("nombre").value.trim();
-    let input2=document.getElementById("email").value.trim();
-    let input3=document.getElementById("telefono").value.trim();
-    let input4=document.getElementById("institucion").value.trim();
-    let textoComepleto = input1 + "," + input2 + "," + input3 + "," + input4;
-    console.log(textoComepleto);
+document.getElementById("btnGenerate").addEventListener("click", generateQRCode);
 
-    if (textoComepleto !== ",,,,") {
-        alert("Porfavor llena al menos un campo para generar el código QR.");
+function generateQRCode() {
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const institucion = document.getElementById("institucion").value.trim();
+    
+    const container = document.getElementById("qrContainer");
+
+    if (!nombre && !email && !telefono && !institucion) {
+        alert("Por favor, llena al menos un campo para generar el código QR.");
         return;
     }
 
-    let url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(textoComepleto);
-
-    let qrImg = document.createElement("img");
-    qrImg.src = url;
-    qrImg.alt = "Código QR";
-
-    document.getElementById("qr").appendChild(qrImg);
+    const textoCompleto = `Nombre: ${nombre}, Email: ${email}, Tel: ${telefono}, Inst: ${institucion}`;
     
+    container.innerHTML = "";
 
+    const url = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(textoCompleto);
 
+    const qrImg = document.createElement("img");
+    qrImg.src = url;
+    qrImg.alt = "Código QR Generado";
+
+    container.appendChild(qrImg);
 }
-
