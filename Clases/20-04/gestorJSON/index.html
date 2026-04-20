@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de JSON</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestor de Usuarios JSON</h2>
+        
+        <form id="userForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo">
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+            
+            <button type="submit" class="btn-add">Agregar Usuario</button>
+        </form>
+
+        <div class="file-actions">
+            <input type="file" id="importarJSON" accept=".json" class="custom-file-input">
+            <button id="descargar" class="btn-export">Exportar JSON</button>
+        </div>
+
+        <h3>Usuarios Guardados:</h3>
+        <table id="tablaUsuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla"></tbody>
+        </table>
+    </div>
+</body>
+<script src="app1.js"></script>
+</html>

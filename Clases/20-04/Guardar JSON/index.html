@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar JSON</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario para guardar usuarios</h2>
+        <form id="userForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="name" required placeholder="Ej. Juan Pérez">
+            
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="email" required placeholder="ejemplo@correo.com">
+            
+            <button type="submit" class="btn-save">Guardar Usuario</button>
+        </form>
+
+        <div class="actions">
+            <h3>Usuarios guardados:</h3>
+            <button id="descargarBtn" class="btn-download">Descargar JSON</button>
+        </div>
+
+        <pre id="salidaJSON"></pre>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
